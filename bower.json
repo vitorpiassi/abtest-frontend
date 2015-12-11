@@ -1,0 +1,21 @@
+{
+  "name": "todo",
+  "authors": [
+    "Rodolfo dos Anjos <dosanjosrodolfo@gmail.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fluxxor": "~1.7.3",
+    "react": "~0.14.3"
+  }
+}

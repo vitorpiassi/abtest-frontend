@@ -16,3 +16,5 @@ gulp.task('babel', function() {
 gulp.task('watch', function() {
 	gulp.watch(paths.scripts, ['babel']);
 });
+
+gulp.task('default', ['babel']);

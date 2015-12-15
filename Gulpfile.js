@@ -1,8 +1,13 @@
 const gulp = require('gulp');
 const babel = require('gulp-babel');
+const sass = require('gulp-sass');
+
+const srcPath = 'public';
+const distPath = 'dist';
 
 var paths = {
-	scripts: ['public/scripts/**/*.jsx'],
+	scripts: [srcPath + '/scripts/**/*.jsx'],
+	styles: [srcPath + '/styles/**/*.scss']
 };
 
 gulp.task('babel', function() {
@@ -10,11 +15,18 @@ gulp.task('babel', function() {
 		.pipe(babel({
 			presets: ['es2015', 'react']
 		}))
-		.pipe(gulp.dest('dist/scripts'));
+		.pipe(gulp.dest(distPath + '/scripts'));
+});
+
+gulp.task('style', function () {
+	return gulp.src(paths.styles)
+		.pipe(sass().on('error', sass.logError))
+		.pipe(gulp.dest(distPath + '/styles'));
 });
 
 gulp.task('watch', function() {
 	gulp.watch(paths.scripts, ['babel']);
+	gulp.watch(paths.styles, ['style']);
 });
 
 gulp.task('default', ['babel']);

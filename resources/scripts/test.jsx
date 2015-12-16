@@ -169,5 +169,3 @@ var Fluxxor = System.import("Fluxxor");
 
 
   React.render(<Application flux={flux} />, document.getElementById("app"));
-
-});

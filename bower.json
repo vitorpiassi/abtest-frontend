@@ -3,9 +3,6 @@
   "authors": [
     "Rodolfo dos Anjos <dosanjosrodolfo@gmail.com>"
   ],
-  "moduleType": [
-    "amd"
-  ],
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -17,6 +14,6 @@
   "dependencies": {
     "fluxxor": "~1.7.3",
     "react": "~0.14.3",
-    "requirejs": "~2.1.22"
+    "system.js": "~0.19.8"
   }
 }

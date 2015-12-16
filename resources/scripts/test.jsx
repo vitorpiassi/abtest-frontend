@@ -1,4 +1,6 @@
-define(['React', 'Fluxxor'], function(React, Fluxxor) {
+var React = System.import("React");
+var Fluxxor = System.import("Fluxxor");
+
   var constants = {
     ADD_TODO: "ADD_TODO",
     TOGGLE_TODO: "TOGGLE_TODO",

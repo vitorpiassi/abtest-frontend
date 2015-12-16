@@ -2,8 +2,8 @@ const gulp = require('gulp');
 const babel = require('gulp-babel');
 const sass = require('gulp-sass');
 
-const srcPath = 'public';
-const distPath = 'dist';
+const srcPath = 'resources';
+const distPath = 'public/dist';
 
 var paths = {
 	scripts: [srcPath + '/scripts/**/*.jsx'],
@@ -29,4 +29,4 @@ gulp.task('watch', function() {
 	gulp.watch(paths.styles, ['style']);
 });
 
-gulp.task('default', ['babel']);
+gulp.task('default', ['babel', 'style']);

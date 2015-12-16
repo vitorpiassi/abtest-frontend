@@ -1,13 +1,16 @@
 const gulp = require('gulp');
 const babel = require('gulp-babel');
 const sass = require('gulp-sass');
+const jasmine = require('gulp-jasmine');
 
 const srcPath = 'public';
 const distPath = 'dist';
+const testPath = 'test';
 
 var paths = {
 	scripts: [srcPath + '/scripts/**/*.jsx'],
-	styles: [srcPath + '/styles/**/*.scss']
+	styles: [srcPath + '/styles/**/*.scss'],
+	tests: [testPath + '/**/*.js']
 };
 
 gulp.task('babel', function() {
@@ -16,6 +19,11 @@ gulp.task('babel', function() {
 			presets: ['es2015', 'react']
 		}))
 		.pipe(gulp.dest(distPath + '/scripts'));
+});
+
+gulp.task('test', function () {
+	return gulp.src(paths.tests)
+		.pipe(jasmine());
 });
 
 gulp.task('style', function () {
@@ -29,4 +37,4 @@ gulp.task('watch', function() {
 	gulp.watch(paths.styles, ['style']);
 });
 
-gulp.task('default', ['babel']);
+gulp.task('default', ['babel', 'test', 'style']);

@@ -1,3 +1,6 @@
 bower_components
 public/dist
 node_modules
+spec
+test/jasmine_examples
+lib

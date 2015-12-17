@@ -8,7 +8,7 @@ const distPath = 'public/dist';
 const testPath = 'test';
 
 var paths = {
-	scripts: [srcPath + '/scripts/**/*.jsx'],
+	scripts: [srcPath + '/scripts/**/*.jsx', srcPath + '/scripts/**/*.js'],
 	styles: [srcPath + '/styles/**/*.scss'],
 	tests: [testPath + '/**/*.js']
 };

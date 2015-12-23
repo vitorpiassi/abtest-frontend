@@ -12,7 +12,8 @@
     "gulp-babel": "^6.1.1",
     "gulp-jasmine": "^2.2.1",
     "gulp-sass": "^2.1.1",
-    "jasmine": "^2.4.1"
+    "jasmine": "^2.4.1",
+    "node-static": "^0.7.7"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

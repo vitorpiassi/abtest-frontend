@@ -3,7 +3,7 @@ const babel = require('gulp-babel');
 const sass = require('gulp-sass');
 const jasmine = require('gulp-jasmine');
 
-const srcPath = 'resources';
+const srcPath = 'public';
 const distPath = 'public/dist';
 const testPath = 'test';
 
@@ -37,4 +37,4 @@ gulp.task('watch', function() {
 	gulp.watch(paths.styles, ['style']);
 });
 
-gulp.task('default', ['babel', 'test', 'style']);
+gulp.task('default', ['babel', 'style']);

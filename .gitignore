@@ -4,3 +4,4 @@ node_modules
 spec
 test/jasmine_examples
 lib
+public/vendor

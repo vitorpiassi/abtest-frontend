@@ -6,8 +6,9 @@ System.config({
 	format: 'cjs',
 	map: {
 		'Fluxxor': '/vendor/fluxxor/build/fluxxor.js',
-		'React': '/vendor/react/react.js',
-		'ReactDom': '/vendor/react/react-dom.js'
+		'react': '/vendor/react/react.js',
+		'react-dom': '/vendor/react/react-dom.js',
+		'react-bootstrap': '/vendor/react-bootstrap/react-bootstrap.js'
 	}
 });
 

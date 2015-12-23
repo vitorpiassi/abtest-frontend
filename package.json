@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "Gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-tap-event-plugin": "^0.2.1"
+  },
   "devDependencies": {
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",

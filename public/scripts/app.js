@@ -1,7 +1,9 @@
 'use strict';
 
 var Flux = require("Flux"),
-	Home = require("views/Home.js");
+	Index = require("views/Index.js"),
+	Home = require("views/pages/Home.js");
 
-Home.render();
 debugger;
+Index.render();
+Home.render();

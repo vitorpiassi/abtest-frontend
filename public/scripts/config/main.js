@@ -5,7 +5,7 @@ System.config({
 	defaultJSExtensions: true,
 	format: 'cjs',
 	map: {
-		'Fluxxor': '/vendor/fluxxor/build/fluxxor.js',
+		'Flux': '/vendor/flux/dist/Flux.js',
 		'react': '/vendor/react/react.js',
 		'react-dom': '/vendor/react/react-dom.js',
 		'react-bootstrap': '/vendor/react-bootstrap/react-bootstrap.js'

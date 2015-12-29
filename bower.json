@@ -1,5 +1,5 @@
 {
-  "name": "todo",
+  "name": "ABTest-frontend",
   "authors": [
     "Rodolfo dos Anjos <dosanjosrodolfo@gmail.com>"
   ],
@@ -12,7 +12,7 @@
     "tests"
   ],
   "dependencies": {
-    "fluxxor": "~1.7.3",
+    "flux": "~2.1.1",
     "react": "~0.14.3",
     "system.js": "~0.19.8",
     "react-bootstrap": "~0.28.1",

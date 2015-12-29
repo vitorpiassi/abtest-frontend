@@ -1,0 +1,15 @@
+machine:  
+  environment:
+    NODE_ENV: test
+  node:
+    version: v0.10.33
+
+dependencies:
+  override:
+    - npm install
+    - bower install
+    - gulp
+
+test:  
+  override:
+    - gulp test

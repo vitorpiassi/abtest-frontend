@@ -9,8 +9,7 @@ dependencies:
     - npm install
     - bower install
     - npm install -g gulp
-    - gulp
 
 test:  
   override:
-    - gulp test
+    - gulp

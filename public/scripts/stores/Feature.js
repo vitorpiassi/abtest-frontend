@@ -1,7 +1,8 @@
 const AppDispatcher = require('../dispatcher/AppDispatcher'),
 	EventEmitter = require('events'),
-	FeatureConstants = require('../constants/Feature'),
-	assign = require('object-assign');
+	assign = require('object-assign'),
+	FeatureConstants = require('constants/Feature'),
+	FeatureModel = require('models/Feature');
 
 const CHANGE_EVENT = 'change';
 
@@ -13,12 +14,14 @@ var features = [
 
 function toggleEnable(featureId, enabled) {
 
+	// Implementar lógica backbone
 	for (var i = 0, len = features.length; i < len; i++)
 		if (features[i].id == featureId)
 			return features[i].enabled = enabled;
 }
 
 function getFeatures() {
+	// Implementar lógica backbone
 	return features;
 }
 

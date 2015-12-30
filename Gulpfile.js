@@ -7,11 +7,11 @@ const babel = require('gulp-babel'),
 const paths = {
 	SRC: 'public',
 	DIST: 'public/dist',
-	TEST: 'test',
-	SCRIPTS: [this.SRC + '/scripts/**/*.jsx', this.SRC + '/scripts/**/*.js'],
-	STYLES: [this.SRC + '/styles/**/*.scss'],
-	TESTS: [this.TEST + '/**/*.js']
-}
+	TEST: 'test'};
+
+paths.SCRIPTS = [paths.SRC + '/scripts/**/*.jsx', paths.SRC + '/scripts/**/*.js'];
+paths.STYLES = [paths.SRC + '/styles/**/*.scss'];
+paths.TESTS = [paths.TEST + '/**/*.js'];
 
 gulp.task('compile', function() {
 	return gulp.src(paths.SCRIPTS)

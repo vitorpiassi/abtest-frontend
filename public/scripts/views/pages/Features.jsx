@@ -23,9 +23,9 @@ class Features extends React.Component {
 	}
 
 	render() {
-		const NormalPage = require('./../partials/NormalPage');
+		const ListPage = require('views/generics/ListPage');
 
-		return <NormalPage items={this.state.features} pageName="Features"/>
+		return <ListPage items={this.state.features} pageName="Features"/>
 	}
 
 	_onChange() {

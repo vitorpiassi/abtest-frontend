@@ -2,7 +2,7 @@ const React = require('react'),
 	ReactDOM = require('react-dom'),
 	rb = require('react-bootstrap');
 
-class NormalPage extends React.Component {
+class ListPage extends React.Component {
 
 	constructor(props) {
 		super(props);
@@ -21,6 +21,6 @@ class NormalPage extends React.Component {
 	}
 }
 
-NormalPage.defaultProps = {pageName: "Listagem"};
+ListPage.defaultProps = {pageName: "Listagem"};
 
-module.exports = NormalPage;
+module.exports = ListPage;

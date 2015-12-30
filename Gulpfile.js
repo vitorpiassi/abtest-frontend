@@ -1,40 +1,40 @@
 const gulp = require('gulp');
-const babel = require('gulp-babel');
-const sass = require('gulp-sass');
-const jasmine = require('gulp-jasmine');
 
-const srcPath = 'public';
-const distPath = 'public/dist';
-const testPath = 'test';
+const babel = require('gulp-babel'),
+	sass = require('gulp-sass'),
+	jasmine = require('gulp-jasmine');
 
-var paths = {
-	scripts: [srcPath + '/scripts/**/*.jsx', srcPath + '/scripts/**/*.js'],
-	styles: [srcPath + '/styles/**/*.scss'],
-	tests: [testPath + '/**/*.js']
-};
+const paths = {
+	SRC: 'public',
+	DIST: 'public/dist',
+	TEST: 'test',
+	SCRIPTS: [this.SRC + '/scripts/**/*.jsx', this.SRC + '/scripts/**/*.js'],
+	STYLES: [this.SRC + '/styles/**/*.scss'],
+	TESTS: [this.TEST + '/**/*.js']
+}
 
-gulp.task('babel', function() {
-	return gulp.src(paths.scripts)
+gulp.task('compile', function() {
+	return gulp.src(paths.SCRIPTS)
 		.pipe(babel({
 			presets: ['es2015', 'react']
 		}))
-		.pipe(gulp.dest(distPath + '/scripts'));
+		.pipe(gulp.dest(paths.DIST + '/scripts'));
 });
 
 gulp.task('test', function () {
-	return gulp.src(paths.tests)
+	return gulp.src(paths.TESTS)
 		.pipe(jasmine());
 });
 
 gulp.task('style', function () {
-	return gulp.src(paths.styles)
+	return gulp.src(paths.STYLES)
 		.pipe(sass().on('error', sass.logError))
-		.pipe(gulp.dest(distPath + '/styles'));
+		.pipe(gulp.dest(paths.DIST + '/styles'));
 });
 
 gulp.task('watch', function() {
-	gulp.watch(paths.scripts, ['babel']);
-	gulp.watch(paths.styles, ['style']);
+	gulp.watch(paths.SCRIPTS, ['compile']);
+	gulp.watch(paths.STYLES, ['style']);
 });
 
-gulp.task('default', ['babel', 'style']);
+gulp.task('default', ['compile', 'style']);

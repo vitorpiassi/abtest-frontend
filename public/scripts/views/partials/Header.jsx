@@ -1,18 +1,17 @@
-'use strict';
+const React = require('react'),
+	ReactDOM = require('react-dom');
 
-var Header = function () {
-	var React = require('react');
-	var ReactDOM = require('react-dom');
-	var Navigationbar = require('./../widgets/Navigationbar');
+class Header extends React.Component {
 
-	var HeaderObj = React.createClass({
-		render: function() {
-			return (
-				<Navigationbar></Navigationbar>
-			);
-		}
-	});
-	return HeaderObj;
-}();
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		const Navigationbar = require('./../widgets/Navigationbar');
+
+		return <Navigationbar/>;
+	}
+}
 
 module.exports = Header;

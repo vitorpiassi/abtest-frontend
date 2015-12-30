@@ -1,22 +1,24 @@
 {
-  "name": "ABTest-frontend",
-  "authors": [
-    "Rodolfo dos Anjos <dosanjosrodolfo@gmail.com>"
-  ],
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "flux": "~2.1.1",
-    "react": "~0.14.3",
-    "system.js": "~0.19.8",
-    "react-bootstrap": "~0.28.1",
-    "bootstrap": "~3.3.6",
-    "bootswatch": "~3.3.6"
-  }
+	"name": "ABTest-frontend",
+	"authors": [
+		"Rodolfo dos Anjos <dosanjosrodolfo@gmail.com>"
+	],
+	"license": "MIT",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"flux": "~2.1.1",
+		"react": "~0.14.3",
+		"system.js": "~0.19.8",
+		"react-bootstrap": "~0.28.1",
+		"bootstrap": "~3.3.6",
+		"bootswatch": "~3.3.6",
+		"object-assign": "^1.0.0",
+		"eventemitter2": "~0.4.14"
+	}
 }

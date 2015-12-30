@@ -2,7 +2,7 @@ var http = require('http');
 var nodeStatic = require('node-static');
 
 var fileServer = new nodeStatic.Server('./public'),
-	serverPort = 3000;
+	serverPort = 5000;
 
 var fileServerConfig = function (req, res) {
 	req.addListener('end', function () {
